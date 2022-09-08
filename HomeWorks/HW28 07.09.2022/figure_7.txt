@@ -1,0 +1,1 @@
+INFO: X = 3, Y = 5, Length side 1 = 11, Length side 2 = 9

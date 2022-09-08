@@ -1,0 +1,1 @@
+INFO: X = 7, Y = 9, Length side = 14

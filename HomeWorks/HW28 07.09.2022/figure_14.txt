@@ -1,0 +1,1 @@
+INFO: X = 6, Y = 8, Radius = 9

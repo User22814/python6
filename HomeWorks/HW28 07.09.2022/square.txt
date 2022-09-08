@@ -1,1 +1,0 @@
-INFO: Type: Square, X = 6, Y = 8, Length side 1 = 11, Length side 2 = 12

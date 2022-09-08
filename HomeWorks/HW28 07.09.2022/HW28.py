@@ -229,9 +229,9 @@ class Square(Shape):
     def show(self):
         return f"INFO: X = {self.x}, Y = {self.y}, Length side = {self.side}"
 
-    def save(self):
-        file = open("square.txt", "w")
-        file.write(f"INFO: Type: Square, X = {self.x}, Y = {self.y}, Length side = {self.side}")
+    def save(self, file_name: str):
+        file = open(file_name, "w")
+        file.write(f"INFO: X = {self.x}, Y = {self.y}, Length side = {self.side}")
         file.close()
 
     def load(self, filename: str):
@@ -250,10 +250,10 @@ class RectangleTask7(Shape):
     def show(self):
         return f"INFO: X = {self.x}, Y = {self.y}, Length side 1 = {self.side1}, Length side 2 = {self.side2}"
 
-    def save(self):
-        file = open("square.txt", "w")
+    def save(self, file_name: str):
+        file = open(file_name, "w")
         file.write(
-            f"INFO: Type: Square, X = {self.x}, Y = {self.y}, Length side 1 = {self.side1}, Length side 2 = {self.side2}")
+            f"INFO: X = {self.x}, Y = {self.y}, Length side 1 = {self.side1}, Length side 2 = {self.side2}")
         file.close()
 
     def load(self, filename: str):
@@ -271,9 +271,9 @@ class CircleTask7(Shape):
     def show(self):
         return f"INFO: X = {self.x}, Y = {self.y}, Radius = {self.r}"
 
-    def save(self):
-        file = open("square.txt", "w")
-        file.write(f"INFO: Type: Square, X = {self.x}, Y = {self.y}, Radius = {self.r}")
+    def save(self, file_name: str):
+        file = open(file_name, "w")
+        file.write(f"INFO: X = {self.x}, Y = {self.y}, Radius = {self.r}")
         file.close()
 
     def load(self, filename: str):
@@ -292,10 +292,10 @@ class Ellipse(Shape):
     def show(self):
         return f"INFO: X = {self.x}, Y = {self.y}, Length side 1 = {self.side1}, Length side 2 = {self.side2}"
 
-    def save(self):
-        file = open("square.txt", "w")
+    def save(self, file_name: str):
+        file = open(file_name, "w")
         file.write(
-            f"INFO: Type: Square, X = {self.x}, Y = {self.y}, Length side 1 = {self.side1}, Length side 2 = {self.side2}")
+            f"INFO: X = {self.x}, Y = {self.y}, Length side 1 = {self.side1}, Length side 2 = {self.side2}")
         file.close()
 
     def load(self, filename: str):
@@ -322,8 +322,10 @@ for i in range(0, 5):
     tmp = Ellipse(2 + i, 4 + i, 7 + i, 8 + i)
     list_figure.append(tmp)
 
+index = 0
 for i in list_figure:
-    i.save()
+    i.save(f"figure_{index}.txt")
+    index += 1
 
 list_figure2 = [0 for i in range(len(list_figure))]
 
