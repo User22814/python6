@@ -336,3 +336,4 @@ list_figure.clear()
 
 for i in list_figure2:
     print(i.show())
+
